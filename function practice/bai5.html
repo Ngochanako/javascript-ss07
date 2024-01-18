@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s=prompt("Nhập vào 1 chuỗi bất kỳ");
+            let list_word=s.split(" ");
+            console.log(list_word);
+           
+            for(let i=0;i<list_word.length;i++){
+                let n=list_word[i].length;
+                list_word[i]=list_word[i].slice(0,n-1)+ list_word[i][n-1].toUpperCase();
+            }
+            s=list_word.join(" ");
+            console.log(s);
+    </script>
+</body>
+</html>

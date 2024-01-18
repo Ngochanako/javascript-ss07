@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var s=prompt("Nhập vào chuỗi bất kỳ");
+        newArray(s)
+        function newArray(s){
+            let digit=[];
+            let letter=[];
+            let specialChar=[];
+            for(let char of s){
+                if(/\d/.test(char)){
+                    digit.push(char)
+               }
+                else if(/[a-zA-Z]/.test(char)){
+                   letter.push(char)
+                }else{
+                    specialChar.push(char)
+                }
+            }
+            let newS=letter.concat(digit,specialChar);
+            console.log(newS)
+        }
+    </script>
+</body>
+</html>

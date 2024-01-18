@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=[-1,9,4,3,2,4,5]
+        var n=4;
+        var l=a.length;
+        var start,end;
+        var sum=0,min_sum=2/0,i,j;
+        for(i=0;i<l;i++){
+            sum=0;
+                for(j=i;j<l;j++){
+                sum+=a[j];
+                if(sum>n){
+                    break;
+                }
+                }
+        
+            if(sum<min_sum){
+                min_sum=sum;
+                start=i;
+                end=j;
+            } 
+        }
+        console.log(a.slice(start,end+1));
+    </script>
+</body>
+</html>

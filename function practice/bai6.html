@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        var a=[4,6,3,7];
+        let n=a.length;
+        var cnt=0;
+        var newA=[];
+        Try(1);
+        console.log(cnt)
+        function Try(i){
+            for(let j=a.indexOf(newA[i-1])+1;j<n-3+i;j++){
+                newA[i]=a[j];
+                if(i==3){
+                    if(newA[1]+newA[2]>newA[3]&&newA[2]+newA[3]>newA[1]&&newA[3]+newA[1]>newA[2]){
+                        cnt++;
+                     //   console.log(newA)
+                    }
+                } else{
+                Try(i+1);
+                }
+            }
+        }
+    </script>
+</body>
+</html>
